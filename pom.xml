@@ -5,4 +5,144 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>STEPS Automation Project</name>
   <description>This project is using for steps automation with maven capability</description>
+
+  <url>http://maven.apache.org</url>
+
+	<properties>
+		<jre.level>1.8</jre.level>
+		<jdk.level>1.8</jdk.level>
+	</properties>
+
+	<build>
+		<plugins>
+			<!-- Compiler plug-in -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>${jdk.level}</source>
+					<target>${jdk.level}</target>
+				</configuration>
+			</plugin>
+			
+			<!-- Below plug-in is used to execute tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M3</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>resources/Runs/testng.xml</suiteXmlFile>
+						
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-report-plugin</artifactId>
+				<version>3.0.0-M3</version>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
+		<!-- <dependency> <groupId>org.seleniumhq.selenium</groupId> <artifactId>selenium-java</artifactId> 
+			<version>3.5.3</version> </dependency> -->
+
+		<!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-server -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>3.141.59</version>
+		</dependency>
+
+
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+			<!-- <scope>compile</scope> -->
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>1.2.17</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>4.0.1</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>4.0.1</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/javax.mail/mail -->
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mail</artifactId>
+			<version>1.4.7</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+		<dependency>
+		    <groupId>com.aventstack</groupId>
+		    <artifactId>extentreports</artifactId>
+		    <version>3.0.0</version>
+		</dependency>
+
+
+
+
+		<!-- https://mvnrepository.com/artifact/com.beust/jcommander -->
+		<dependency>
+			<groupId>com.beust</groupId>
+			<artifactId>jcommander</artifactId>
+			<version>1.72</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-surefire-plugin</artifactId>
+			<version>3.0.0-M3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<version>3.8.0</version>
+			<type>maven-plugin</type>
+		</dependency>
+	</dependencies>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </project>
